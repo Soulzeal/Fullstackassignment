@@ -1,0 +1,103 @@
+< ---------------------------------------------- 24 APRIL RDBMS ASSIGNMENT ----------------------------------------------------------------->
+
+Q.1. What is RDBMS ? Why do industries use RDBMS ?
+Ans - RDBMS stands for Relational Database Management System, which is a type of software used to manage the relational database. A relational database is a database that organizes data into one or more tables, where each table is a set of rows and columns.
+
+Industries use RDBMS for several reasons -
+First, RDBMS allows them to store and retrieve large amounts of data quickly and efficiently. It also provides a way to ensure data consistency and integrity by enforcing data constraints and rules, such as ensuring that each record has a unique identifier or that certain fields are not left blank.
+
+Overall, RDBMS is a critical tool for industries that need to manage large amounts of data and ensure its accuracy , consistency , and accessbility.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.2. Explain the relationship data model in depth.
+Ans - The relationship data model is a way of organizing the data in a tables that are related to each other based on their attributes. Each table represents an entity or concept, and each row in the table represents a specific instance of that entity. Attributes are represented by columns in the table, and relationships are established by defining common attributes between entities. This model helps businesses manage their data efficiently and allows for easy access and retrieval of information.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.3. What is the importance of Relationships in a Database management system ? Explain the types of relationships.
+Ans - Relationships are an important aspect of a database management system because they help to organize data in a logical and efficient manner. Relationships define how data in different tables is related to each other, allowing businesses to manage their data more effectively, ensure accuracy and consistency, and provide the insights into their operations.
+
+There are three main types of relationships in a databse management system -
+1. One-to-one relationship : In a one-to-one relationship, one record in a table is related to only one record in another table. For example, in an employee database, each employee may have only one office location assigned to them.
+
+2. One-to-many : In a one-to-many relationship, one record in a table is related to many records in another table. For example, in a customer database, one customer may have manhy orders assciated with them.
+
+3. Many-to-many relationship : In a many-to-many relationship, many records in one table are related to many records in another table. For example, in a music database, many albums may have many songs associated with them.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.4. Explain the different types of keys in RDBMS considering a real-life scenario.
+Ans - In relational database management system (RDBMS), keys are used to estabish relationships between different tables. Keys are unique identifiers that allow us to retrieve data from a table and link it to data in another table. There are several types of keys in RDBMS, each with its unique purpose.
+
+1. Primary Key : A primary key is a unique identifier for a row in a table. It is used to ensure that each row in a table is unique and can be used to estabilsh relationships with other tables. For example, in a student database, the primary key of the students table could be the student ID number.
+
+2. Foreign Key : A foreign key is a field in one table that is used to reference the primary key of another table. It is used to create relationships between tables and ensure data consistency. For example, in a student database, the foreign key of the "grades" table could be the student ID number , linking each grade to a specific student.
+
+3. Candidate Key : A candidate key is a field in a table that can serve as a primary key. It must be unique, non-null , and minimal, meaning it cannot be reduced further. For example, ina  product databse, the candidate key of the "products" table could be the product code.
+
+4. Alternate Key : An alternate key is a candidate key that is not chosen to be the primary key. It is still unique and can be used to establish relationships between tables. For example , in a n employee database, the alternate key of the "employees" table could be the employee email address.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.5. Write a short note on Single Responsibility Principle.
+Ans - SPR can be interpreted as each table in a database should have a single reponsibilty or represent a single concept. This means that a table should contain data about a specific entity, such as a customer or an order, and should not have data that relates to other entities or concepts. This helps to acoid data redundancy , improves data consistency and reduces the risk of data anomalies.
+
+For example, consider a database for an online store that includes tables for customers, orders, and products. The customers table should only contain data about customers, such as their name, address, and contact information. The orders table should only contain data about orders, such as the order date, customer ID, and shipping information. The products table should only contain data about products, such as the product name, price, and description. By keeping each table focused on a single responsibility, we can avoid storing redundant data and improve the integrity of our data.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.6. Explain the different types of errors that could arise in a denormalized database.
+Ans - 
+Data redundancy: Denormalization often involves duplicating data across multiple tables, which can lead to data redundancy. This redundancy can lead to inconsistencies if the duplicated data is updated in one place but not in others.
+
+Data inconsistency: Denormalization can also lead to data inconsistency, where the same data is stored in multiple tables, but the values may differ across the tables. This can occur if the data is updated in one table but not in others.
+
+Update anomalies: Denormalized databases are more prone to update anomalies, which occur when updating a record in one table requires updates to other tables to ensure data consistency. For example, if a customer's address is stored in multiple tables, updating the address in one table would require updating it in other tables as well.
+
+Poor query performance: Denormalization can improve query performance by reducing the need for joins across multiple tables. However, if the denormalization is not well-designed, it can result in poor query performance due to redundant or inconsistent data.
+
+Difficulty in maintaining data integrity: Denormalization can make it more difficult to maintain data integrity, as it can be harder to ensure that the same data is consistent across multiple tables.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.7. What is normalization and what is the need for normalization ?
+Ans - 
+Normalization is a process of organizing data in a database in such a way that it reduces data redundancy, improves data consistency, and minimizes the risk of data anomalies. It involves breaking down a large table into smaller, more manageable tables and establishing relationships between them.
+
+The need for normalization arises from the fact that a poorly designed database can lead to data inconsistencies, inefficiencies, and errors. For example, if a database contains redundant data, it can be time-consuming to update the data in multiple locations and could result in data inconsistencies if updates are missed. Similarly, if a database contains data that is not well-organized, it can be difficult to retrieve the data efficiently or to ensure that the data is consistent across the database.
+
+Normalization helps to address these issues by breaking down a large table into smaller tables and establishing relationships between them. By doing so, it reduces data redundancy, improves data consistency, and minimizes the risk of data anomalies. For example, if a customer's address is stored in a separate table, it can be updated in one location and automatically updated in all related tables, avoiding the need for manual updates. Similarly, if a product's price is stored in a separate table, it can be updated in one location and automatically updated in all related tables, avoiding data inconsistencies.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.8. List out the different levels of Normalization and explain them in detail.
+Ans - Normalization is a process of organizing data in a database in such a way that it reduces data redundancy, improves data consistency, and minimizes the risk of data anomalies. There are several levels of normalization, each with increasing levels of normalization:
+
+First Normal Form (1NF): A table is in 1NF if it has no repeating groups or arrays, and all columns contain atomic values. Atomic values are values that cannot be divided further, such as a single name or a single address. For example, a table containing a list of customers and their phone numbers would not be in 1NF if it allows multiple phone numbers for a single customer.
+
+Second Normal Form (2NF): A table is in 2NF if it is in 1NF and all non-key columns are fully dependent on the primary key. A primary key is a column or set of columns that uniquely identifies each record in the table. For example, if a table contains customer orders and has columns for order date, product name, and product price, but the product price is not dependent on the order date, the table would not be in 2NF.
+
+Third Normal Form (3NF): A table is in 3NF if it is in 2NF and all non-key columns are not transitively dependent on the primary key. Transitive dependency occurs when a non-key column is dependent on another non-key column. For example, if a table contains customer orders and has columns for customer name, city, and state, but the city is dependent on the state and not on the primary key, the table would not be in 3NF.
+
+Boyce-Codd Normal Form (BCNF): A table is in BCNF if it is in 3NF and every determinant is a candidate key. A determinant is a column or set of columns that determines the values of other columns in the same table. A candidate key is a column or set of columns that uniquely identifies each record in the table. For example, if a table contains customer orders and has columns for order ID, product ID, and quantity, and the combination of order ID and product ID uniquely identifies each record, then the table is in BCNF.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.9. What are joins and why do we need them ?
+Ans - A join is a method of combining data from two or more tables based on a related column between them. It allows us to combine data from different tables into a single result set, which can be used for further analysis or visualization.
+
+< ----------------------------------------------------- NEXT ------------------------------------------------------------------->
+
+Q.10. Explain the different types of joins ?
+Ans - There are different types of joins in SQL, including:
+
+Inner join: Returns only the rows that have matching values in both tables being joined.
+
+Left join: Returns all the rows from the left table and the matching rows from the right table. If there is no matching row in the right table, the result set will contain NULL values.
+
+Right join: Returns all the rows from the right table and the matching rows from the left table. If there is no matching row in the left table, the result set will contain NULL values.
+
+Full outer join: Returns all the rows from both tables, including the unmatched rows. If there is no matching row in one of the tables, the result set will contain NULL values.
+
+< ----------------------------------------------------- END ------------------------------------------------------------------->

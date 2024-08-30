@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Key Press</title>
+  </head>
+  <h1>I have the information of your key press.</h1>
+  <input type="text" id="input" />
+  <h2>You pressed the key : <span id="key"></span></h2>
+
+  <script>
+    let input = document.getElementById("input");
+    let key = document.getElementById("key");
+    input.addEventListener("keypress", (event) => {
+      key.innerText = event.key;
+    });
+  </script>
+  <body></body>
+</html>

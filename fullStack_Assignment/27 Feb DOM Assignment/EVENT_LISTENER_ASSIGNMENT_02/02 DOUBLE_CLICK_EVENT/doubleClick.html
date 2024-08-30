@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double Click</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #doubleTap {
+        padding: 30px 60px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Double tap to see the text</h1>
+    <button id="doubleTap">Message</button>
+
+    <script>
+      alert("You got a message from pwskills");
+
+      let doubleTap = document.getElementById("doubleTap");
+      doubleTap.addEventListener("dblclick", () => {
+        alert("You assignment has been graded , good work learner");
+      });
+    </script>
+  </body>
+</html>

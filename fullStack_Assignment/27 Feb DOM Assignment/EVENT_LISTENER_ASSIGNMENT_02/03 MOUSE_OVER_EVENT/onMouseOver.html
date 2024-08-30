@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Mouse Over</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #mouseover {
+        padding: 30px 60px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mouseover Event counter : move your cursor</h1>
+    <button id="mouseover"></button>
+
+    <script>
+      let countValue = 0;
+
+      let count = document.getElementById("mouseover");
+      count.innerText = countValue;
+
+      count.addEventListener("mouseover", () => {
+        countValue = countValue + 1;
+        count.innerText = countValue;
+      });
+    </script>
+  </body>
+</html>

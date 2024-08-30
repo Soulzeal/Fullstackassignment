@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Highlighter</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="para">
+      Pursuing b.tech from babulal tarabai institute of research and technology
+      and learning full stack development.
+    </p>
+
+    <script>
+      let para = document.getElementById("para");
+      let words = para.innerHTML.split(" ");
+
+      for (let i = 0; i < words.length; i++) {
+        if (words[i].length >= 8) {
+          words[i] = "<span class='highlight'>" + words[i] + "</span>";
+        }
+      }
+      para.innerHTML = words.join(" ");
+    </script>
+  </body>
+</html>

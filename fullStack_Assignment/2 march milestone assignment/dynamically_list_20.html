@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Here We are adding pages of a book.</h2>
+    <ul id="learn-list">
+      <li>Page 1</li>
+      <li>Page 2</li>
+      <li>Page 3</li>
+    </ul>
+    <button id="add-pg-btn">Add Item</button>
+    <p id="info-message"></p>
+
+    <script>
+      const remainingPageList = ["Page 4", "Page 5", "Page 6", "Page 7", "Page 8"];
+
+      const book = document.querySelector("#learn-list");
+      const addPageBtn = document.querySelector("#add-pg-btn");
+      const infoMessage = document.querySelector("#info-message");
+
+      let nextPageIndex = 0;
+
+      addPageBtn.addEventListener("click", function () {
+        if (nextPageIndex < remainingPageList.length) {
+          const newPage = document.createElement("li");
+          newPage.textContent = remainingPageList[nextPageIndex];
+          book.appendChild(newPage);
+
+          nextPageIndex++;
+        } else {
+          infoMessage.textContent = "All pages have been added.";
+        }
+      });
+    </script>
+  </body>
+</html>

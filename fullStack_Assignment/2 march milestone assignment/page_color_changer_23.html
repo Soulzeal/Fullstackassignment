@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Page Color Changer</title>
+	<style>
+		*{
+			margin : 0;
+			padding : 0;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height : 98vh;
+			border : 10px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Page Color Changer</h1>
+
+<script>
+	let colors = ['red' , 'green' , 'yellow' , 'pink' , 'purple' , 'brown']
+	let element = document.getElementsByTagName("body")[0];
+	console.log(element)
+	let random = Math.floor(Math.random() * 6);
+	console.log(random)
+	element.style.backgroundColor = colors[random];
+	console.log(colors[random])
+
+</script>
+</body>
+</html>

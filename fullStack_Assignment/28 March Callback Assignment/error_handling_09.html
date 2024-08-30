@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Handling</title>
+  </head>
+  <body>
+    <h1>Error Handling</h1>
+
+    <script>
+      const url = "https://jsonplaceholder.typicode.com/posts/123456789";
+
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network issue while fetching");
+            return response.json();
+          }
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          const error_message = document.createElement("p");
+          error_message.textContent =
+            "There was a problem with the fetch request: " + error.message;
+          document.body.appendChild(error_message);
+        });
+    </script>
+  </body>
+</html>

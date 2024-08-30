@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Out Event</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #mouseout {
+        padding: 50px 70px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Move out your cursor.</h1>
+    <button id="mouseout">Move inside the box</button>
+
+    <script>
+      let mouseOut = document.getElementById("mouseout");
+
+      mouseOut.addEventListener("mouseout", () => {
+        alert("You moved out from the box");
+      });
+    </script>
+  </body>
+</html>
